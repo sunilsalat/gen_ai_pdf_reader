@@ -145,6 +145,24 @@ def process_pdf_and_create_faiss_index(raw_pdf_elements, img_urls):
     return 'Vector Stored Locally'
 
 
-
-
 __all__ = ['extract_images_using_partition_pdf', 'process_pdf_and_create_faiss_index' ]
+
+# https://www.youtube.com/watch?v=hSuCT6Z2QLk&t=66s
+
+# https://stackoverflow.com/questions/76258587/combine-vectore-store-into-langchain-toolkit
+# db1 = FAISS.from_texts(<txt>, embeddings)
+# db2 = FAISS.from_texts(<pdf>, embeddings)
+
+# vectorstore_info = VectorStoreInfo(
+#     name="Guidelines",
+#     description="QA Analysis Guidelines",
+#     vectorstore=db1
+#     )
+
+# vectorstore_info2 = VectorStoreInfo(
+#     name="Transcript",
+#     description="Transcript of Call Center Agent Call",
+#     vectorstore=db2
+#     )
+
+# db1.merge_from(db2)  # This will combine db2 INTO db1

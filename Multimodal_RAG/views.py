@@ -59,7 +59,7 @@ def get_answer(request):
             relevant_images.append(d.metadata['original_content'])
 
     result = run_qa_chian(context, question)
-    return JsonResponse({"relevant_images": relevant_images, "result": result})
+    return JsonResponse({"relevant_images": relevant_images[0], "result": result})
 
 def get_signed_url(request):
     key = request.GET.get('key')
